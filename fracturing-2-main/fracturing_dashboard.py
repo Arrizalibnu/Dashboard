@@ -8,6 +8,7 @@ import math
 from obspy import read
 import pyvista as pv
 from pyvista import Plotter
+pv.set_plot_theme('dark')
 
 # read file function
 def read_data(file):
