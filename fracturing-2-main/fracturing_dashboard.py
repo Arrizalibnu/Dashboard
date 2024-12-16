@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 # import obspy
 import math
 from obspy import read
-import pyvista as pv
-from pyvista import Plotter
-pv.set_plot_theme('dark')
+# import pyvista as pv
+# from pyvista import Plotter
+# pv.set_plot_theme('dark')
 
 # read file function
 def read_data(file):
@@ -25,16 +25,16 @@ def visualize_2d(data):
     ax.set_ylabel("Sample Number")
     st.pyplot(fig)
 
-def visualize_3d(data):
-    st.subheader("3D Visualization")
-    grid = pv.UniformGrid()
-    grid.dimensions = (*data.shape, 1)  
-    grid.spacing = (1, 1, 1)
-    grid.point_data["Amplitude"] = data.ravel(order="F")
-    plotter = Plotter(notebook=False)
-    plotter.add_volume(grid, opacity="sigmoid", cmap="viridis")
-    plotter.show(jupyter_backend="static")
-    st.write("3D visualization displayed in PyVista.")
+# def visualize_3d(data):
+#     st.subheader("3D Visualization")
+#     grid = pv.UniformGrid()
+#     grid.dimensions = (*data.shape, 1)  
+#     grid.spacing = (1, 1, 1)
+#     grid.point_data["Amplitude"] = data.ravel(order="F")
+#     plotter = Plotter(notebook=False)
+#     plotter.add_volume(grid, opacity="sigmoid", cmap="viridis")
+#     plotter.show(jupyter_backend="static")
+#     st.write("3D visualization displayed in PyVista.")
 
 def plot_single_trace(data, trace_index, sampling_rate):
     """
