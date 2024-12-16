@@ -171,7 +171,7 @@ with tab_4:
 with tab_5:
     st.write("""### Read Seismic Data""")
     with st.container():
-        st.write("Upload your file to read seismic data 2D or 3D")
+        st.write("Upload your file to read seismic data 2D")
         uploaded_file = st.file_uploader("Upload Seismic Data", type=["segy", "sgy"])
 
         if uploaded_file:
